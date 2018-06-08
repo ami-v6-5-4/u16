@@ -4,16 +4,8 @@ build:
 
   pre_ci_boot:
     image_name: drydock/u16
-    image_tag: master
+    image_tag: v6.5.4
     pull: true
     
   ci:   
     - python --version 
-    - docker pull shippabledocker/sample_node_pvt:ecr
-    
-integrations:
-    
-  hub:
- #Docker integration
-    - integrationName: ship-docker
-      type: dockerRegistryLogin
